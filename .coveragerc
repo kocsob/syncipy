@@ -1,0 +1,6 @@
+# Test coverage configuration.
+# Usage:
+#   pytest --cov
+
+[run]
+source = syncipy
