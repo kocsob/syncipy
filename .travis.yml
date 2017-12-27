@@ -1,0 +1,26 @@
+# https://travis-ci.org/kocsob/syncipy
+dist: xenial
+
+# Use containers instead of full VMs for faster startup.
+sudo: false
+
+matrix:
+    fast_finish: true
+
+language: python
+
+python:
+    - 3.5
+    - 3.6
+    - nightly
+
+install:
+    # Install Syncipy as a Python package
+    - pip install -e '.[dev]'
+
+script:
+    # Checking lint
+    - python -m flake8
+
+    # Run tests
+    - python -m pytest
