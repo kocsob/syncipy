@@ -17,6 +17,7 @@ setup(
     extras_require={
         'dev': [
             'flake8',
+            'pyfakefs',
             'pytest',
             'pytest-pep8',
             'pytest-cov',
