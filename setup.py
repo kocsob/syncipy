@@ -12,6 +12,7 @@ setup(
     author_email='kocsob@users.noreply.github.com',
     packages=['syncipy'],
     install_requires=[
+        'configargparse',
         'requests',
     ],
     extras_require={

@@ -22,7 +22,8 @@ class Syncipy:
         if self.logger is None:
             self.logger = logging.getLogger(__name__)
 
-    def get_current_ip(self, ) -> Union[IPv4Address, IPv6Address]:
+    def get_current_ip(self, bar=False) -> Union[IPv4Address, IPv6Address]:
+        print('BAR', bar)
         current_ip = None
         for ip_identifier_url in self.ip_identifier_urls:
             current_ip = self._get_ip_from_identifier(ip_identifier_url)
