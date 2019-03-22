@@ -12,15 +12,23 @@ setup(
     author_email='kocsob@users.noreply.github.com',
     packages=['syncipy'],
     install_requires=[
+        'click',
+        'click-config-file',
         'requests',
     ],
     extras_require={
         'dev': [
             'flake8',
+            'pyfakefs',
             'pytest',
             'pytest-pep8',
             'pytest-cov',
         ]
+    },
+    entry_points={
+        'console_scripts': [
+            'syncipy = syncipy.cli:cli',
+        ],
     },
     classifiers=[
         "License :: OSI Approved :: Apache Software License",
